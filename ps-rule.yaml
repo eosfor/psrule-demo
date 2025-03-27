@@ -50,7 +50,7 @@ input:
     - '**'
 
     # Include deployments.
-    - '!**/deployments/**/*.bicep'
+    - '!/deployments/**/*.bicep'
 
 configuration:
   # Enable automatic expansion of Azure parameter files.
