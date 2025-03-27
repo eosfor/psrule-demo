@@ -34,9 +34,9 @@ requires:
 #     enabled: true
 
 # Use PSRule for Azure.
-# include:
-#   module:
-#     - PSRule.Rules.Azure
+include:
+  module:
+    - PSRule.Rules.Azure
 
 # Configure the output culture for recommendations.
 output:
