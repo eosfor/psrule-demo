@@ -16,3 +16,7 @@ if ($Null -eq (Get-InstalledModule -Name InvokeBuild -MinimumVersion 5.4.0 -Erro
 if ($Null -eq (Get-InstalledModule -Name PSRule.Rules.Azure  -ErrorAction Ignore)) {
     Install-Module PSRule.Rules.Azure -Scope CurrentUser -Force;
 }
+
+if ($Null -eq (Get-InstalledModule -Name Az  -ErrorAction Ignore)) {
+    Install-Module Az -Scope CurrentUser -Force;
+}
