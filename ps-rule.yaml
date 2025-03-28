@@ -27,6 +27,10 @@ include:
   module:
     - PSRule.Rules.Azure
 
+rule:
+  include:
+    - 'local.*'
+
 # Configure the output culture for recommendations.
 output:
   culture:
