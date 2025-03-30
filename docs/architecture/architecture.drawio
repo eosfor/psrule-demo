@@ -1,9 +1,54 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15" version="26.1.3">
-  <diagram name="Page-1" id="ho06pJD9XT2md7JWAsIX">
-    <mxGraphModel>
+  <diagram name="architecture" id="ho06pJD9XT2md7JWAsIX">
+    <mxGraphModel dx="1240" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;endArrow=oval;endFill=0;" edge="1" parent="1" source="dWVXHuuEFcWPN2uHc0JD-9" target="dWVXHuuEFcWPN2uHc0JD-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-9" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="628" y="372" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-1" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;strokeWidth=2;fillColor=none;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="250" y="230" width="270" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-2" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.virtual_network;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="240" width="50" height="27.500000000000004" as="geometry" />
+        </mxCell>
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="270" y="440" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-4" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Service_Plans.svg;" vertex="1" parent="1">
+          <mxGeometry x="706" y="355" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-5" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/Function_Apps.svg;" vertex="1" parent="1">
+          <mxGeometry x="638" y="385" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-6" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/Function_Apps.svg;" vertex="1" parent="1">
+          <mxGeometry x="727" y="385" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-7" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/Function_Apps.svg;" vertex="1" parent="1">
+          <mxGeometry x="638" y="455" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-8" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/Function_Apps.svg;" vertex="1" parent="1">
+          <mxGeometry x="727" y="455" width="68" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-11" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;dashPattern=1 1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="270" y="370" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-12" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Private_Endpoint.svg;" vertex="1" parent="1">
+          <mxGeometry x="440" y="380" width="43.64" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.664;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="dWVXHuuEFcWPN2uHc0JD-9" target="dWVXHuuEFcWPN2uHc0JD-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-15" value="VNET Integration" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="513" y="455" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dWVXHuuEFcWPN2uHc0JD-16" value="Private Endpoint" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="518" y="380" width="110" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
