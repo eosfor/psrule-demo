@@ -26,6 +26,7 @@ requires:
 include:
   module:
     - PSRule.Rules.Azure
+    - PSQuickGraph
 
 rule:
   include:
