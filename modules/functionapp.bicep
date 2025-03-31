@@ -18,11 +18,11 @@ resource functionApp 'Microsoft.Web/sites@2022-03-01' = {
   }
 }
 
-resource vnetIntegration 'Microsoft.Web/sites/virtualNetworkConnections@2022-03-01' = {
+resource vnetIntegration 'Microsoft.Web/sites/networkConfig@2024-04-01' = {
   parent: functionApp
-  name: 'vnet'
+  name: 'virtualNetwork'
   properties: {
-    vnetResourceId: functionSubnetId
+    subnetResourceId: functionSubnetId
   }
 }
 

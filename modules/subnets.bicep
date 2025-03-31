@@ -13,7 +13,7 @@ resource functionSubnet 'Microsoft.Network/virtualNetworks/subnets@2022-01-01' =
   parent: vnet
   name: 'function-integration-subnet'
   properties: {
-    addressPrefix: '10.0.1.0/24'
+    addressPrefix: '10.9.1.0/24'
   }
 }
 
@@ -21,7 +21,7 @@ resource privateEndpointSubnet 'Microsoft.Network/virtualNetworks/subnets@2022-0
   parent: vnet
   name: 'private-endpoint-subnet'
   properties: {
-    addressPrefix: '10.0.2.0/24'
+    addressPrefix: '10.9.3.0/24'
     privateEndpointNetworkPolicies: 'Disabled'
   }
 }

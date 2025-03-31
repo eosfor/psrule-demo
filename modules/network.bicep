@@ -6,7 +6,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2022-01-01' = {
   location: location
   properties: {
     addressSpace: {
-      addressPrefixes: ['10.0.0.0/16']
+      addressPrefixes: ['10.9.0.0/16']
     }
   }
 }
