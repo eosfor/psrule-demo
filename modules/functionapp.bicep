@@ -15,6 +15,7 @@ resource functionApp 'Microsoft.Web/sites@2022-03-01' = {
       linuxFxVersion: 'DOTNET|6.0'
     }
     httpsOnly: true
+    publicNetworkAccess: 'Disabled'
   }
 }
 

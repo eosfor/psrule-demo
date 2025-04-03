@@ -48,6 +48,9 @@ input:
 
     # Include module tests.
     # - '!modules/**/*.bicep'
+convention:
+  include:
+    - FullConnectivityTest
 
 configuration:
   # Enable automatic expansion of Azure parameter files.
