@@ -95,10 +95,11 @@ Export-PSRuleConvention 'FullConnectivityTest' `
 
             $global:vnetId = $TargetObject.id
 
-            foreach ($subnetResource in $TargetObject.resources) {
-                Add-Edge -From $subnetResource.id -To $TargetObject.id  -Graph $global:connectionGraph
-                Add-Edge -From $subnetResource.id -To $TargetObject.id  -Graph $global:pvtEndpointGraph
-            }
+        foreach ($subnetResource in $TargetObject.resources) {
+            # VNET -> Subnet
+            Add-Edge -From $TargetObject.id -To $subnetResource.id -Graph $global:connectionGraph
+            Add-Edge -From $TargetObject.id -To $subnetResource.id -Graph $global:pvtEndpointGraph
+        }
         }
 
         if ($TargetObject.type -eq 'Microsoft.Web/sites') {
@@ -110,7 +111,8 @@ Export-PSRuleConvention 'FullConnectivityTest' `
             Add-Vertex -Graph $global:connectionGraph -Vertex $TargetObject.id
             Add-Vertex -Graph $global:pvtEndpointGraph -Vertex $TargetObject.id
 
-            Add-Edge -From $TargetObject.id -To $vnetIntegrationObject.properties.subnetResourceId -Graph $global:connectionGraph
+            #Add-Edge -From $TargetObject.id -To $vnetIntegrationObject.properties.subnetResourceId -Graph $global:connectionGraph
+            Add-Edge -From $vnetIntegrationObject.properties.subnetResourceId -To $TargetObject.id -Graph $global:connectionGraph
         }
 
         if ($TargetObject.type -eq 'Microsoft.Network/privateEndpoints') {
@@ -128,8 +130,11 @@ Export-PSRuleConvention 'FullConnectivityTest' `
     }`
     -End {
         Write-Verbose "Exporting graph"
-        Export-Graph -Graph $global:connectionGraph -Format MSAGL_SUGIYAMA -Path ./output/graph.svg
-        Export-Graph -Graph $global:pvtEndpointGraph -Format MSAGL_SUGIYAMA -Path ./output/pvtEndpointGraph.svg
+        Export-Graph -Graph $global:connectionGraph -Format Vega_ForceDirected -Path ./output/graph.html
+        Export-Graph -Graph $global:pvtEndpointGraph -Format Vega_ForceDirected -Path ./output/pvtEndpointGraph.html
+
+        Export-Graph -Graph $global:connectionGraph -Format Vega_TreeLayout -Path ./output/graph.tree.html
+        Export-Graph -Graph $global:pvtEndpointGraph -Format Vega_TreeLayout -Path ./output/pvtEndpointGraph.tree.html
 
         # There should be only one VNET
         if ($global:vnetId.Count -ne 1) {
